@@ -1,0 +1,2456 @@
+/* =========================================================
+   1. RESET & GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   2. CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 11, 11, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #242424;
+}
+
+.nav-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  opacity: 0.65;
+}
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 13px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 620px;
+  color: #bdbdbd;
+  font-size: 18px;
+}
+
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Button Hover Effect */
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn.fill {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================================================
+   6. GENERAL SECTIONS
+   ========================================================= */
+
+section {
+  padding: 100px 0;
+  border-top: 1px solid #202020;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 35px;
+  letter-spacing: -1px;
+}
+
+/* =========================================================
+   7. ABOUT
+   ========================================================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.about p {
+  color: #b8b8b8;
+}
+
+/* =========================================================
+   8. PROFILE / SELECTED WORK
+   ========================================================= */
+
+.portfolio {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding: 0 390px;
+}
+
+.profile-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #292929;
+  border-radius: 24px;
+  background: #111;
+  min-height: 320px;
+  display: flex;
+  align-items: end;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 35px 35px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.75) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.profile-overlay span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* =========================================================
+   9. GENERAL CARDS
+   ========================================================= */
+
+.services,
+.portfolio,
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  border: 1px solid #292929;
+  border-radius: 18px;
+  padding: 25px;
+  background: #111;
+  transition: all 0.3s ease;
+}
+
+/* All Cards Hover Effect */
+
+.card:hover {
+  background: #1a1a1a;
+  border-color: #fff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.12);
+}
+
+.card:hover h3 {
+  color: #fff;
+}
+
+.card:hover p {
+  color: #ccc;
+}
+
+/* =========================================================
+   10. PROJECT CARDS
+   ========================================================= */
+
+.project {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Project Hover */
+
+.project:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+.project img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Project Image Zoom */
+
+.project:hover img {
+  transform: scale(1.08);
+}
+
+/* Dark gradient for readable text */
+
+.project-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 80px 25px 25px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.75) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.project-overlay small {
+  display: block;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.project-overlay h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.project-overlay p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.project:hover small {
+  color: #aaa;
+}
+
+/* =========================================================
+   11. TOOLS
+   ========================================================= */
+
+.tool {
+  padding: 18px;
+}
+
+.tool:hover {
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   12. CONTACT
+   ========================================================= */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: end;
+}
+
+.contact p {
+  color: #aaa;
+  max-width: 600px;
+}
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+footer {
+  padding: 0px 0px 30px 0px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* =========================================================
+   14. HERBIE'S FLOATING GALLERY
+   ========================================================= */
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+.gallery-content {
+  position: relative;
+
+  width: min(1400px, 95vw);
+  max-height: 90vh;
+
+  padding: 35px 25px;
+
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.05);
+
+  animation: galleryFloat 0.4s ease;
+}
+
+@keyframes galleryFloat {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.gallery-content h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.gallery-close {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #555;
+  border-radius: 50%;
+
+  background: #222;
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.gallery-close:hover {
+  background: white;
+  color: black;
+  transform: rotate(90deg);
+}
+
+.gallery-track {
+  display: flex;
+
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  padding: 20px 10px 30px;
+
+  scroll-behavior: smooth;
+
+  animation: slideFromRight 0.8s ease;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.gallery-track img {
+  flex: 0 0 auto;
+
+  width: 300px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  border: 1px solid #333;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.gallery-track img:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Gallery Scrollbar */
+
+.gallery-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-track::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+.gallery-track::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+.gallery-track::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* =========================================================
+   15. RAERENZ BUTTONS
+   ========================================================= */
+
+.raerenz-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.raerenz-btn {
+  padding: 9px 16px;
+
+  border: 1px solid #aaa;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.raerenz-btn:hover {
+  background: white;
+  color: black;
+  border-color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.raerenz-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================================================
+   16. RAERENZ GALLERY
+   ========================================================= */
+
+#raerenz-gallery .gallery-content {
+  position: relative;
+
+  width: min(1400px, 95vw);
+  max-height: 90vh;
+
+  padding: 30px 25px 18px;
+
+  background: #111;
+
+  border: 1px solid #444;
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.05);
+
+  animation: galleryFloat 0.4s ease;
+
+  overflow: hidden;
+}
+
+#raerenz-gallery .gallery-content h2 {
+  font-size: 24px;
+  margin: 0 50px 18px 0;
+}
+
+#raerenz-gallery .gallery-track {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 10px 30px;
+
+  scroll-behavior: smooth;
+}
+
+#raerenz-gallery .gallery-track img {
+  flex: 0 0 auto;
+
+  width: 420px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #181818;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Picture #17
+   1366 × 2658 */
+
+#raerenz-gallery .gallery-track img:nth-child(17) {
+  width: auto;
+  height: 420px;
+
+  object-fit: contain;
+}
+
+#raerenz-gallery .gallery-track img:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Raerenz Horizontal Scrollbar */
+
+#raerenz-gallery .gallery-track::-webkit-scrollbar {
+  height: 10px;
+}
+
+#raerenz-gallery .gallery-track::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+#raerenz-gallery .gallery-track::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+#raerenz-gallery .gallery-track::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+#raerenz-gallery .gallery-track {
+  scrollbar-width: auto;
+  scrollbar-color: #666 #222;
+}
+
+/* =========================================================
+   17. FULLSCREEN IMAGE VIEWER
+   ========================================================= */
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.image-viewer.active {
+  display: flex;
+}
+
+.image-viewer img {
+  max-width: 95vw;
+  max-height: 92vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+
+  animation: imageViewerIn 0.25s ease;
+}
+
+@keyframes imageViewerIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.image-viewer-close {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid #555;
+  border-radius: 50%;
+
+  background: rgba(30, 30, 30, 0.9);
+  color: white;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  transition: all 0.3s ease;
+}
+
+.image-viewer-close:hover {
+  background: white;
+  color: black;
+  transform: rotate(90deg);
+}
+
+.image-viewer-prev,
+.image-viewer-next {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid #555;
+  border-radius: 50%;
+
+  background: rgba(30, 30, 30, 0.85);
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  transition: all 0.3s ease;
+}
+
+.image-viewer-prev {
+  left: 25px;
+}
+
+.image-viewer-next {
+  right: 25px;
+}
+
+.image-viewer-prev:hover,
+.image-viewer-next:hover {
+  background: white;
+  color: black;
+}
+
+.image-viewer-counter {
+  position: absolute;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: rgba(20, 20, 20, 0.85);
+
+  color: #aaa;
+
+  font-size: 13px;
+
+  z-index: 3;
+}
+
+/* =========================================================
+   18. ANGELO SHS GALLERY
+   ========================================================= */
+
+#angelo-gallery .gallery-content {
+  width: min(1400px, 95vw);
+  max-height: 90vh;
+}
+
+#angelo-gallery .gallery-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 10px 30px;
+
+  scroll-behavior: smooth;
+}
+
+#angelo-gallery .gallery-track img {
+  flex: 0 0 auto;
+
+  width: 420px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #181818;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+#angelo-gallery .gallery-track img:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================================
+   19. PICKADEV GALLERY
+   ========================================================= */
+
+#pickadev-gallery .gallery-track img {
+  cursor: pointer;
+}
+
+/* =========================================================
+   20. APPAREL & JERSEY GALLERY
+   ========================================================= */
+
+#apparel-gallery .gallery-content {
+  width: min(1400px, 95vw);
+  max-height: 90vh;
+}
+
+#apparel-gallery .gallery-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 10px 30px;
+
+  scroll-behavior: smooth;
+}
+
+#apparel-gallery .gallery-track img {
+  flex: 0 0 auto;
+
+  width: 420px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #181818;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* =========================================================
+   21. CUSTOM GRAPHICS BUTTONS
+   ========================================================= */
+
+.custom-graphics-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.custom-graphics-btn {
+  padding: 9px 16px;
+
+  border: 1px solid #aaa;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.custom-graphics-btn:hover {
+  background: white;
+  color: black;
+  border-color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.custom-graphics-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================================================
+   22. CUSTOM GRAPHICS GALLERY
+   ========================================================= */
+
+/* Gallery Container */
+
+#custom-graphics-gallery .gallery-content {
+  width: min(1400px, 95vw);
+  max-height: 90vh;
+
+  padding: 30px 25px 18px;
+
+  background: #111;
+
+  border: 1px solid #444;
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.05);
+
+  animation: galleryFloat 0.4s ease;
+
+  overflow: hidden;
+}
+
+/* Gallery Title */
+
+#custom-graphics-gallery .gallery-content h2 {
+  font-size: 24px;
+  margin: 0 50px 18px 0;
+}
+
+/* Image Track */
+
+#custom-graphics-gallery .gallery-track {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 10px 30px;
+
+  scroll-behavior: smooth;
+}
+
+/* Custom Graphics Images */
+
+#custom-graphics-gallery .gallery-track img {
+  flex: 0 0 auto;
+
+  width: 420px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #181818;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+#custom-graphics-gallery .gallery-track img:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Empty Category */
+
+.gallery-empty {
+  width: 100%;
+
+  min-height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+/* Custom Graphics Scrollbar */
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar {
+  height: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+#custom-graphics-gallery .gallery-track {
+  scrollbar-width: auto;
+  scrollbar-color: #666 #222;
+}
+
+/* Custom Graphics Gallery - Final Layout Rules */
+
+#custom-graphics-gallery .gallery-content {
+  width: min(1400px, 95vw);
+
+  padding: 30px 25px 15px;
+
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+
+#custom-graphics-gallery .gallery-content h2 {
+  flex-shrink: 0;
+
+  font-size: 24px;
+  margin: 0 50px 18px 0;
+}
+
+/* Image Track */
+
+#custom-graphics-gallery .gallery-track {
+  flex: 1 1 auto;
+
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 25px;
+
+  /* IMPORTANT */
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  padding: 15px 10px 25px;
+
+  scroll-behavior: smooth;
+
+  /* Prevent flex items from shrinking */
+  white-space: nowrap;
+}
+
+/* Lanyard Images
+   2500 × 5000 = 1:2 */
+
+#custom-graphics-gallery .gallery-track img {
+  flex: 0 0 250px;
+
+  width: 250px;
+  height: 500px;
+
+  min-width: 250px;
+  min-height: 500px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #181818;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Hover */
+
+#custom-graphics-gallery .gallery-track img:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar */
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+#custom-graphics-gallery .gallery-track::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+#custom-graphics-gallery .gallery-track {
+  scrollbar-width: auto;
+  scrollbar-color: #666 #222;
+}
+
+/* =========================================================
+   23. SKILLS & TOOLS
+   ========================================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.skills-category {
+  position: relative;
+  padding: 30px;
+  background: #111;
+  border: 1px solid #2d2d2d;
+  border-radius: 20px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-6px);
+  border-color: #555;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.skills-category-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.skills-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.skills-category-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   24. SERVICES SECTION
+   ========================================================= */
+
+.services-section {
+  padding: 100px 20%;
+}
+
+.services-section .section-heading {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.services-section .section-heading small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.services-section .section-heading h2 {
+  margin: 0 0 15px;
+  font-size: clamp(2.2rem, 5vw, 2rem);
+}
+
+.services-section .section-heading p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.65;
+}
+
+/* Services Grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Service Card */
+
+.service-card {
+  position: relative;
+  padding: 30px;
+  min-height: 230px;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.service-number {
+  margin-bottom: 35px;
+
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+
+  opacity: 0.4;
+}
+
+.service-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  max-width: 520px;
+  margin: 0 0 20px;
+
+  font-size: 0.92rem;
+  line-height: 1.7;
+
+  opacity: 0.65;
+}
+
+.service-card span {
+  display: inline-block;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+
+  opacity: 0.45;
+}
+
+/* =========================================================
+   25. SERVICES CLICK NOTICE
+   ========================================================= */
+
+.services-note {
+  margin-top: 18px;
+  padding-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.services-note span {
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   26. FOOTER SOCIAL ICONS
+   ========================================================= */
+
+.footer-socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  color: #fff;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-socials a i {
+  font-size: 16px;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-socials a:active {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   27. SERVICE REQUEST MODAL
+   ========================================================= */
+
+.service-request-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.service-request-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Modal Box */
+
+.service-request-content {
+  position: relative;
+
+  width: min(100%, 560px);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  background: rgba(20, 20, 20, 0.96);
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+
+  transform: translateY(20px) scale(0.98);
+
+  transition: transform 0.25s ease;
+}
+
+.service-request-modal.active .service-request-content {
+  transform: translateY(0) scale(1);
+}
+
+/* Close Button */
+
+.service-request-close {
+  position: absolute;
+
+  top: 15px;
+  right: 17px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: inherit;
+
+  font-size: 1.6rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-request-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(90deg);
+}
+
+/* Header */
+
+.service-request-header {
+  margin-bottom: 25px;
+  padding-right: 30px;
+}
+
+.service-request-header small {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  opacity: 0.55;
+}
+
+.service-request-header h2 {
+  margin: 7px 0 8px;
+}
+
+.service-request-header p {
+  margin: 0;
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+
+  opacity: 0.65;
+}
+
+/* Form Groups */
+
+.service-request-content .form-group {
+  margin-bottom: 18px;
+}
+
+.service-request-content label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.service-request-content label span {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* Inputs */
+
+.service-request-content input,
+.service-request-content textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: inherit;
+
+  font: inherit;
+  font-size: 0.85rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.service-request-content input:focus,
+.service-request-content textarea:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.service-request-content input::placeholder,
+.service-request-content textarea::placeholder {
+  opacity: 0.4;
+}
+
+/* Selected Service */
+
+#selected-service {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Textarea */
+
+.service-request-content textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+/* Character Counter */
+
+.character-count {
+  margin-top: 6px;
+
+  text-align: right;
+
+  font-size: 0.7rem;
+
+  opacity: 0.45;
+}
+
+/* Submit Button */
+
+.quotation-submit {
+  width: 100%;
+
+  margin-top: 5px;
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #fff;
+  color: #111;
+
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.quotation-submit:hover {
+  transform: translateY(-1px);
+}
+
+.quotation-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form Status */
+
+.form-status {
+  margin: 14px 0 0;
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  min-height: 20px;
+}
+
+/* =========================================================
+   28. FORM HELP / GOOGLE DRIVE
+   ========================================================= */
+
+.form-help {
+  margin-top: 8px;
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-help p {
+  margin: 0;
+
+  font-size: 0.75rem;
+  line-height: 1.5;
+
+  opacity: 0.65;
+}
+
+.form-help p + p {
+  margin-top: 5px;
+}
+
+.form-help strong {
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* =========================================================
+   29. RESPONSIVE - GENERAL
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .hero-grid,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .services,
+  .portfolio,
+  .tools {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .profile-card {
+    min-height: 220px;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .contact .buttons {
+    margin-top: 22px;
+  }
+}
+
+/* =========================================================
+  30. PORTFOLIO — RESPONSIVE LAYOUT
+   Mobile → Foldable → Tablet → Laptop → Desktop → Smart Display
+========================================================= */
+
+/* =========================================================
+   BASE / DESKTOP-FIRST SAFE DEFAULT
+========================================================= */
+
+.portfolio {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 6%;
+  box-sizing: border-box;
+}
+
+.portfolio-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* =========================================================
+   PORTFOLIO CARDS
+========================================================= */
+
+.project-card,
+.portfolio-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.project-card img,
+.portfolio-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Prevent text from forcing cards wider */
+
+.project-card h3,
+.project-card p,
+.portfolio-card h3,
+.portfolio-card p {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+  .portfolio {
+    max-width: 1600px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+/* =========================================================
+   EXTRA LARGE DESKTOP / 2K / 4K
+   1800px+
+========================================================= */
+
+@media (min-width: 1800px) {
+  .portfolio {
+    max-width: 1750px;
+  }
+
+  .portfolio-grid {
+    gap: 32px;
+  }
+}
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+   1025px – 1439px
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .portfolio {
+    padding: 90px 5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+/* =========================================================
+   TABLETS — LANDSCAPE
+   769px – 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio {
+    padding: 80px 5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .project-card,
+  .portfolio-card {
+    min-height: 0;
+  }
+}
+
+/* =========================================================
+   TABLETS — PORTRAIT
+   600px – 768px
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .portfolio {
+    padding: 70px 5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   FOLDABLE PHONES
+   480px – 599px
+========================================================= */
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .portfolio {
+    padding: 65px 20px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .project-card,
+  .portfolio-card {
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE PHONES
+   360px – 479px
+========================================================= */
+
+@media (min-width: 360px) and (max-width: 479px) {
+  .portfolio {
+    padding: 60px 16px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-card,
+  .portfolio-card {
+    width: 100%;
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   BELOW 360px
+========================================================= */
+
+@media (max-width: 359px) {
+  .portfolio {
+    padding: 50px 12px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* =========================================================
+   PORTFOLIO IMAGES — RESPONSIVE
+========================================================= */
+
+.portfolio-grid img,
+.project-card img,
+.portfolio-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* Don't allow hover effects to break mobile layouts */
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover img,
+  .portfolio-card:hover img {
+    transform: scale(1.02);
+  }
+}
+
+/* =========================================================
+   PORTFOLIO SECTION HEADINGS
+========================================================= */
+
+.portfolio-header,
+.portfolio-heading {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.portfolio-header h2,
+.portfolio-heading h2 {
+  margin-bottom: 12px;
+}
+
+.portfolio-header p,
+.portfolio-heading p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET HEADING
+========================================================= */
+
+@media (max-width: 768px) {
+  .portfolio-header,
+  .portfolio-heading {
+    margin-bottom: 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADING
+========================================================= */
+
+@media (max-width: 480px) {
+  .portfolio-header,
+  .portfolio-heading {
+    margin-bottom: 28px;
+  }
+
+  .portfolio-header h2,
+  .portfolio-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .portfolio-header p,
+  .portfolio-heading p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+}
+
+/* =========================================================
+   PORTFOLIO CATEGORY / FILTER BUTTONS
+========================================================= */
+
+.portfolio-filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.portfolio-filters button {
+  white-space: nowrap;
+}
+
+/* Mobile filters become horizontally scrollable */
+
+@media (max-width: 600px) {
+  .portfolio-filters {
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    padding: 3px 2px 10px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .portfolio-filters::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* =========================================================
+   PROJECT CARD CONTENT
+========================================================= */
+
+.project-card-content,
+.portfolio-card-content {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-card h3,
+.portfolio-card h3 {
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
+.project-card p,
+.portfolio-card p {
+  line-height: 1.55;
+}
+
+/* =========================================================
+   TABLET CARD TYPOGRAPHY
+========================================================= */
+
+@media (max-width: 1024px) {
+  .project-card h3,
+  .portfolio-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p,
+  .portfolio-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================================
+   MOBILE CARD TYPOGRAPHY
+========================================================= */
+
+@media (max-width: 600px) {
+  .project-card h3,
+  .portfolio-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-card p,
+  .portfolio-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================================
+   FOLDABLE / NARROW SCREEN PROTECTION
+========================================================= */
+
+@media (max-width: 380px) {
+  .portfolio {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .project-card h3,
+  .portfolio-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .project-card p,
+  .portfolio-card p {
+    font-size: 0.76rem;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE PHONES
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .portfolio {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+/* =========================================================
+   FOLDABLE / DUAL-SCREEN LANDSCAPE
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   SMART DISPLAYS
+   Nest Hub / Nest Hub Max style landscape screens
+========================================================= */
+
+@media (min-width: 1000px) and (max-height: 900px) {
+  .portfolio {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .portfolio-grid {
+    gap: 20px;
+  }
+}
+
+/* =========================================================
+   NEST HUB MAX / LARGE SMART DISPLAY
+========================================================= */
+
+@media (min-width: 1200px) and (max-height: 1000px) {
+  .portfolio {
+    max-width: 1500px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+/* =========================================================
+   VERY LARGE DISPLAYS
+========================================================= */
+
+@media (min-width: 2000px) {
+  .portfolio {
+    max-width: 1800px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .project-card:hover img,
+  .portfolio-card:hover img {
+    transform: none;
+  }
+
+  .project-card,
+  .portfolio-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .portfolio-card,
+  .project-card img,
+  .portfolio-card img {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   ULTRA-WIDE SCREEN PROTECTION
+========================================================= */
+
+@media (min-width: 1800px) {
+  .portfolio-grid {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SAFE BOX SIZING
+========================================================= */
+
+.portfolio *,
+.portfolio *::before,
+.portfolio *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   31. RESPONSIVE - IMAGE VIEWER
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .image-viewer {
+    padding: 15px;
+  }
+
+  .image-viewer img {
+    max-width: 100vw;
+    max-height: 90vh;
+  }
+
+  .image-viewer-prev,
+  .image-viewer-next {
+    width: 40px;
+    height: 40px;
+
+    font-size: 22px;
+  }
+
+  .image-viewer-prev {
+    left: 10px;
+  }
+
+  .image-viewer-next {
+    right: 10px;
+  }
+}
+
+/* =========================================================
+   32. RESPONSIVE - SKILLS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .skills-category {
+    padding: 25px 20px;
+  }
+
+  .skills-category-header h3 {
+    font-size: 18px;
+  }
+
+  .skill-item {
+    font-size: 12px;
+    padding: 9px 13px;
+  }
+}
+
+/* =========================================================
+   33. RESPONSIVE - SERVICES
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 6%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .service-number {
+    margin-bottom: 25px;
+  }
+}
+
+/* =========================================================
+   34. RESPONSIVE - SERVICE REQUEST MODAL
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .service-request-modal {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .service-request-content {
+    width: 100%;
+    max-height: 92vh;
+
+    padding: 28px 20px;
+
+    border-radius: 16px;
+  }
+
+  .service-request-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-request-header p {
+    font-size: 0.8rem;
+  }
+
+  .service-request-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .service-request-content input,
+  .service-request-content textarea {
+    font-size: 0.85rem;
+  }
+
+  .services-note {
+    font-size: 0.78rem;
+  }
+}
